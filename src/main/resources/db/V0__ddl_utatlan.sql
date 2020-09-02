@@ -96,7 +96,14 @@ create table orders
 
 create table products
 (
-    id         serial primary key,
+    id serial primary key,
+    name varchar(255),
+    description varchar(255),
+    purchase_price double,
+    sale_price double,
+    img varchar(255),
+    tag varchar(255),
+    lot integer,
     created_at timestamp null,
     updated_at timestamp null,
     category_id int not null,

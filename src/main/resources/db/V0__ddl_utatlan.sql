@@ -3,12 +3,22 @@
 create table addresses
 (
     id      serial primary key,
-    user_id int not null
+    user_id int not null,
+    house_number varchar(255),
+    street_name varchar(255),
+    street_type varchar(255),
+    city varchar(255),
+    state varchar(255),
+    postal_code varchar(255)
 );
 
 create table categories
 (
-    id serial primary key
+    id serial primary key,
+    brand varchar(255) not null,
+    description varchar(255) not null,
+    constraint categories_brand_unique
+        unique (brand)
 );
 
 create table clients
@@ -66,9 +76,9 @@ create table menus
     href      varchar(255) null,
     icon      varchar(255) null,
     slug      varchar(255) not null,
-    parent_id int          null,
-    menu_id   int          not null,
-    sequence  int          not null
+    parent_id int null,
+    menu_id   int not null,
+    sequence  int not null
 );
 
 create table model_has_permissions
@@ -91,7 +101,8 @@ create table orders
 (
     id      serial primary key,
     user_id int not null,
-    product_id int not null
+    product_id int not null,
+    total double precision not null
 );
 
 create table products
@@ -99,11 +110,11 @@ create table products
     id serial primary key,
     name varchar(255),
     description varchar(255),
-    purchase_price double,
-    sale_price double,
+    purchase_price double precision not null,
+    sale_price double precision not null,
     img varchar(255),
-    tag varchar(255),
-    lot integer,
+    tag varchar(255) not null ,
+    lot integer not null ,
     created_at timestamp null,
     updated_at timestamp null,
     category_id int not null,

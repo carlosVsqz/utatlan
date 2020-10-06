@@ -23,8 +23,8 @@ public class SwaggerConfig {
 	
 	Contact contact = new Contact(
 			"Food-Boot", 
-			"https://food-boot.github.io/Food-Delivery-Web-App-BackEnd-ScpringBoot", 
-			"shehandvid@gmail.com");
+			"",
+			"carls10vasquez@gmail.com");
 	
 	List<VendorExtension> vendorExtensions = new ArrayList<>();
 	
@@ -32,7 +32,7 @@ public class SwaggerConfig {
 			"Food Delivery Web App - RESTful web services documentation",
 			"This pages documents all the available RESTful Web Service endpoints", 
 			"1.0.0", 
-			"https://github.com/food-boot/Food-Delivery-Web-App-BackEnd-ScpringBoot",
+			"",
 			contact, 
 			"Apache-2.0", 
 			"https://opensource.org/licenses/Apache-2.0", 

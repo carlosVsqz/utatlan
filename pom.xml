@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.food.delivery.app.ws</groupId>
-	<artifactId>food-delivery-web-app</artifactId>
+	<artifactId>utatlan</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>utatlan</name>
 	<description>Demo project for Spring Boot</description>
 
